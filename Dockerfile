@@ -17,6 +17,7 @@ RUN \
 	jq \
 	nano \
 	net-tools \
+	zsh \
 	sudo && \
  echo "**** install code-server ****" && \
  if [ -z ${CODE_RELEASE+x} ]; then \
