@@ -20,7 +20,5 @@ exec \
 			--user-data-dir /config/data \
 			--extensions-dir /config/extensions \
 			--disable-telemetry \
-			--disable-updates \
-			--auth "${AUTH}" \
 			${BASEPATH} \
 			/config/workspace
