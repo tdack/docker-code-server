@@ -7,18 +7,12 @@ else
   echo "starting with no password"
 fi
 
-if [ -n "${BASEPATH}" ]; then
-  BASEPATH="--base-path ${BASEPATH}"
-else
-  BASEPATH=""
-fi
-
 exec \
 	s6-setuidgid abc \
-		/app/code-server/code-server \
+		/usr/bin/code-server \
 			--bind-addr 0.0.0.0:8443 \
 			--user-data-dir /config/data \
 			--extensions-dir /config/extensions \
 			--disable-telemetry \
-			${BASEPATH} \
+			--auth "${AUTH}" \
 			/config/workspace

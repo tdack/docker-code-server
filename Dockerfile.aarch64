@@ -1,4 +1,4 @@
-FROM lsiobase/ubuntu:bionic
+FROM lsiobase/ubuntu:arm64v8-bionic
 
 # set version label
 ARG BUILD_DATE
@@ -35,7 +35,6 @@ RUN \
 	jq \
 	nano \
 	net-tools \
-	zsh \
 	nodejs \
 	sudo \
 	yarn && \
